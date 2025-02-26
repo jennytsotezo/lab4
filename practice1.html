@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practice 1: Profile Page</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    
+</head>
+<body>
+    <h1>My Profile</h1>
+    <p>Hello, my name is Jenny Tsotezo. Welcome to my profile page!</p>
+    <p>Check out my projects on <a href="https://github.com/jennytsotezo" target="_blank">GitHub</a>.</p>
+
+    <img src="flowers.jpg" alt="A picture of beautiful flowers" width="400" height="300">
+    
+    <div class="video-container">
+        <iframe id="randomVideo" width="560" height="315" 
+                src="" 
+                title="YouTube Video" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+        </iframe>
+    </div>
+    
+    <p><a href="index.html">Back to Index</a></p>
+    
+    <script>
+        var videoID = "qz0aGYrrlhU";
+        document.getElementById("randomVideo").src = "https://www.youtube.com/embed/" + videoID;
+    </script>
+</body>
+</html>

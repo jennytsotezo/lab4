@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practice 2: CSS Font Control</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    
+</head>
+<body>
+    <h1>CSS Font Control</h1>
+    <div class="dummy-box" id="dummyText">
+        This is some dummy text. You can change my text color and border color using RGB values, as well as adjust my border width.
+    </div>
+    <form onsubmit="updateStyle(); return false;">
+        <div class="form-group">
+            <label for="textColor">Text Color (RGB, e.g., 255,0,0):</label>
+            <input type="text" id="textColor" placeholder="255,0,0">
+        </div>
+        <div class="form-group">
+            <label for="borderColor">Border Color (RGB, e.g., 0,0,255):</label>
+            <input type="text" id="borderColor" placeholder="0,0,255">
+        </div>
+        <div class="form-group">
+            <label for="borderWidth">Border Width (px):</label>
+            <input type="number" id="borderWidth" value="2">
+        </div>
+        <button type="submit">Update Style</button>
+    </form>
+    <p class="back-link"><a href="index.html">Back to Index</a></p>
+
+    <script>
+        function updateStyle() {
+            var textColorInput = document.getElementById('textColor').value;
+            var borderColorInput = document.getElementById('borderColor').value;
+            var borderWidth = document.getElementById('borderWidth').value;
+            
+            var textColor = "rgb(" + textColorInput + ")";
+            var borderColor = "rgb(" + borderColorInput + ")";
+            var dummyBox = document.getElementById('dummyText');
+            dummyBox.style.color = textColor;
+            dummyBox.style.borderColor = borderColor;
+            dummyBox.style.borderWidth = borderWidth + "px";
+        }
+    </script>
+</body>
+</html>

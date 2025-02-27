@@ -12,6 +12,14 @@ body {
     text-align: left;   
   }
 
+  .dummy-box {
+    border: 2px solid black;
+    padding: 10px;
+    margin: 20px;      
+    text-align: left;  
+    max-width: 600px;
+  }
+
   form {
       margin: 20px;       
       text-align: left;   
